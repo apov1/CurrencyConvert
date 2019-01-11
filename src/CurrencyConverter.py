@@ -74,7 +74,7 @@ class CurrencyConverter:
     def calculate_conversion(self, amount, source_rate, dest_rate):
         """
         Calculates conversion from one currency to another.
-        
+
             :param amount float: amount to convert
             :param source_rate float: conversion rate for input_currency
             :param dest_rate float: conversion rate for output_currency
@@ -116,4 +116,3 @@ class CurrencyConverter:
             "input": {"amount": amount, "currency": input_currency},
             "output": output_data,
         }
-
