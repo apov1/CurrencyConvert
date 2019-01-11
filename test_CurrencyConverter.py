@@ -92,7 +92,7 @@ class TestConvert(unittest.TestCase):
         self.converter = CurrencyConverter()
         self.rates = {"USD": 0.87, "EUR": 1, "CZK": 0.04}
 
-    @patch("src.CurrencyConverter.CurrencyConverter.get_conversion_rates")
+    @patch("src.CurrencyConverter.CurrencyConverter.call_rates_api")
     def test_single_conversion(self, mock_rates):
         """Test conversion 1:1."""
         mock_rates.return_value = self.rates
@@ -105,7 +105,7 @@ class TestConvert(unittest.TestCase):
         expected = {"input": {"amount": 1, "currency": "CZK"}, "output": {"USD": 0.05}}
         self.assertDictEqual(conversion, expected)
 
-    @patch("src.CurrencyConverter.CurrencyConverter.get_conversion_rates")
+    @patch("src.CurrencyConverter.CurrencyConverter.call_rates_api")
     def test_all_conversion(self, mock_rates):
         """Test conversion 1:ALL."""
         mock_rates.return_value = self.rates
