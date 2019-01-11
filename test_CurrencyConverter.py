@@ -17,7 +17,7 @@ class TestParseSymbol(unittest.TestCase):
         self.assertEqual(self.converter.parse_symbol("¥"), "CNY")
         self.assertEqual(self.converter.parse_symbol("₽"), "RUB")
 
-    def test_notSymbols(self):
+    def test_not_symbols(self):
         not_symbol = ["USD", "1x", ".23"]
         for ns in not_symbol:
             self.assertEqual(self.converter.parse_symbol(ns), ns)
