@@ -14,4 +14,4 @@ Web API:
 CurrencyConverter is a class which handles all external API calls (Skypicker) and currency conversions. It can use Redis for caching as well - just pass configuration to a constructor (optional).
 Configuration should be a dictionary with "host", "port" and "password" keys and corresponding values.
 
-There is test_CurrencyConverter.py file as well, which should test all functionality in CurrencyConverter class, except for Redis and API call.
+There is test_CurrencyConverter.py file as well, which contains simple tests to test all functionality in CurrencyConverter class, except for Redis and API call.
