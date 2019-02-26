@@ -1,6 +1,4 @@
-# KiwiEntryTask
-Entry task for junior position at Kiwi.com
-
+# CurrencyConvert
 Simple currency converter with CLI and Web API.
 
 CLI parameters:
